@@ -10,14 +10,14 @@ const Projects = () => {
       name: 'Saffron',
       link: 'https://saffronapp.co',
       description: 'A cooking app for the modern cook.',
-      tech: ['React', 'Typescript', 'GraphQL', 'Node', 'PostgreSQL'],
+      tech: ['React', 'Typescript', 'GraphQL', 'Node' /* 'PostgreSQL' */],
     },
     {
       id: 2,
       name: 'QTF',
       link: 'https://qtf.app',
       description: 'A simple, easy to use, and free to use time tracking app.',
-      tech: ['React', 'Typescript', 'GraphQL', 'Node', 'PostgreSQL'],
+      tech: ['React', 'Typescript', 'GraphQL', 'Node' /* 'PostgreSQL' */],
     },
   ];
 
@@ -31,7 +31,7 @@ const Projects = () => {
           <p>{project.description}</p>
           <ul>
             <p className="text-sm font-semibold">Techstack:</p>
-            <div className=" flex flex-wrap space-x-4">
+            <div className="mt-2 flex flex-row flex-wrap space-x-4">
               {project.tech.map((tech) => (
                 <Label key={tech}>{tech}</Label>
               ))}
