@@ -44,10 +44,10 @@ const Index = () => {
       <ul>
         {socialLinks.map((link) => (
           <li key={link.id}>
-            <p onClick={() => window.open(link.link)}>
+            <a href={link.link}>
               {/* <i className={`fab fa-${link.icon}`}></i> */}
               {link.name}
-            </p>
+            </a>
           </li>
         ))}
       </ul>
