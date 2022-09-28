@@ -12,6 +12,13 @@ const Projects = () => {
       description: 'A cooking app for the modern cook.',
       tech: ['React', 'Typescript', 'GraphQL', 'Node', 'PostgreSQL'],
     },
+    {
+      id: 2,
+      name: 'QTF',
+      link: 'https://qtf.app',
+      description: 'A simple, easy to use, and free to use time tracking app.',
+      tech: ['React', 'Typescript', 'GraphQL', 'Node', 'PostgreSQL'],
+    },
   ];
 
   return (
