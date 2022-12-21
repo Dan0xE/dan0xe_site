@@ -69,14 +69,14 @@ const Projects = () => {
     {
       id: 9,
       name: 'TaskTracker',
-      link: '',
+      link: 'https://github.com/Dan0xE/TaskTracker',
       description: 'A simple but old task tracker written in React',
       tech: ['React', 'Typescript'],
     },
     {
       id: 10,
       name: 'CLI-Calculator',
-      link: '',
+      link: 'https://github.com/Dan0xE/cli-calculator/',
       description: 'A simple calculator written in 10 minutes in Python',
       tech: ['Python'],
     },
