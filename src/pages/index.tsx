@@ -35,10 +35,10 @@ const Index = () => {
       }
     >
       <p>
-        Hello, I&apos;m Dan. I&apos;m a Software Consultant who enjoys making
-        programming videos on YouTube and building a cooking app called Saffron.
+        Hello, I&apos;m Dan. I&apos;m a Software Consultant who enjoys learning
+        and making new stuff everyday and building a mod client called Nevouno.
         My favorite technologies right now are: React.js, Typescript, GraphQL,
-        Node.js, and PostgreSQL. <br />
+        Node.js, and Rust. <br />
         <br /> Follow Me Online Here:
       </p>
       <ul>

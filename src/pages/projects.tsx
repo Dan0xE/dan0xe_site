@@ -1,23 +1,82 @@
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
+import Alert from '../components/alert';
 import Label from '../components/label';
 
 const Projects = () => {
   const projectList = [
     {
       id: 1,
-      name: 'Saffron',
-      link: 'https://saffronapp.co',
-      description: 'A cooking app for the modern cook.',
-      tech: ['React', 'Typescript', 'GraphQL', 'Node' /* 'PostgreSQL' */],
+      name: 'Nevouno (Currently Private)',
+      link: '',
+      description:
+        'A Minecraft Client that lets you extract and modify Minecraft Snapshots as well as running them on a custom Hypervisor',
+      tech: ['React', 'Typescript', 'Rust', 'C' /* 'PostgreSQL' */],
     },
     {
       id: 2,
-      name: 'QTF',
+      name: 'CraOff',
       link: 'https://qtf.app',
-      description: 'A simple, easy to use, and free to use time tracking app.',
-      tech: ['React', 'Typescript', 'GraphQL', 'Node' /* 'PostgreSQL' */],
+      description: 'A method to activate Office.',
+      tech: ['C#', '.NET', 'Batch'],
+    },
+    {
+      id: 3,
+      name: 'Learner.es (Closed Source)',
+      link: 'https://Learner.es',
+      description: 'A website to learn English made for Spanish speakers',
+      tech: ['PHP', 'MySQL', 'JavaScript'],
+    },
+    {
+      id: 4,
+      name: 'Danscodelab',
+      link: 'https://danscodelab.com',
+      description: 'A website for my old consulting company',
+      tech: ['PHP', 'MySQL', 'JavaScript'],
+    },
+    {
+      id: 5,
+      name: 'Danscodelab Canary',
+      link: 'https://canary.danscodelab.com',
+      description: 'The new website for my old consulting company',
+      tech: ['React', 'Typescript', 'PostgreSQL', 'NodeJS'],
+    },
+    {
+      id: 6,
+      name: 'Tauri Logger',
+      link: 'https://github.com/Dan0xE/tauri-logger',
+      description: 'A simple logger for Tauri',
+      tech: ['Typescript', 'Rust'],
+    },
+    {
+      id: 7,
+      name: 'TDU2 Mod Manager (Closed Source)',
+      link: '',
+      description:
+        'A mod manager for TDU2 with a planned integration of TDU World',
+      tech: ['React', 'Typescript', 'Rust', 'PostgreSQL'],
+    },
+    {
+      id: 8,
+      name: 'STSL',
+      link: 'https://github.com/Dan0xE/STSL',
+      description: 'A small TCP client/server written in C++',
+      tech: ['C++'],
+    },
+    {
+      id: 9,
+      name: 'TaskTracker',
+      link: '',
+      description: 'A simple but old task tracker written in React',
+      tech: ['React', 'Typescript'],
+    },
+    {
+      id: 10,
+      name: 'CLI-Calculator',
+      link: '',
+      description: 'A simple calculator written in 10 minutes in Python',
+      tech: ['Python'],
     },
   ];
 
@@ -25,20 +84,45 @@ const Projects = () => {
     <Main
       meta={<Meta title="Projects" description="Projects i am working on" />}
     >
-      {projectList.map((project) => (
-        <div key={project.id}>
-          <h2 className="underline">{project.name}</h2>
-          <p>{project.description}</p>
-          <ul>
-            <p className="text-sm font-semibold">Techstack:</p>
-            <div className="mt-2 flex flex-row flex-wrap space-x-4">
-              {project.tech.map((tech) => (
-                <Label key={tech}>{tech}</Label>
-              ))}
-            </div>
-          </ul>
-        </div>
-      ))}
+      <Alert style={'bg-blue-200'}>
+        <p className="p-2">
+          These are projects i am working on, some are private and some are
+          public. If you want to see the source code of a project, please
+          contact me or checkout my{' '}
+          <a href="https://github.com/dan0xe" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
+          .
+          <br />
+          <br />
+          Also please note that not all of my projects are listed here.
+        </p>
+      </Alert>
+      <>
+        {projectList.map((project) => (
+          <div key={project.id} className="w-auto">
+            <h2>
+              <a
+                className="text-slate-800 "
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {project.name}
+              </a>
+            </h2>
+            <p>{project.description}</p>
+            <ul>
+              <p className="text-sm font-semibold">Techstack:</p>
+              <div className="mt-2 flex flex-row flex-wrap space-x-4">
+                {project.tech.map((tech) => (
+                  <Label key={tech}>{tech}</Label>
+                ))}
+              </div>
+            </ul>
+          </div>
+        ))}
+      </>
     </Main>
   );
 };
