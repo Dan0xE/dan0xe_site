@@ -19,7 +19,7 @@ const Projects = () => {
     {
       id: 2,
       name: 'CraOff',
-      link: 'https://qtf.app',
+      link: 'https://github.com/Dan0xE/CraOff',
       description: 'A method to activate Office.',
       tech: ['C#', '.NET', 'Batch'],
     },
