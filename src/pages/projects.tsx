@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
 
@@ -80,24 +82,61 @@ const Projects = () => {
     },
   ];
 
+  const [show, setShow] = React.useState(true);
+
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if (localStorage.getItem('dont_show_alert') === 'true') {
+        setShow(false);
+      }
+    }
+  }, []);
+
   return (
     <Main
       meta={<Meta title="Projects" description="Projects i am working on" />}
     >
-      <Alert style={'bg-blue-200'}>
-        <p className="p-2">
-          These are projects i am working on, some are private and some are
-          public. If you want to see the source code of a project, please
-          contact me or checkout my{' '}
-          <a href="https://github.com/dan0xe" target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-          .
-          <br />
-          <br />
-          Also please note that not all of my projects are listed here.
-        </p>
-      </Alert>
+      {show && (
+        <>
+          <Alert style={'bg-blue-200'}>
+            <p className="p-2">
+              These are projects i am working on, some are private and some are
+              public. If you want to see the source code of a project, please
+              contact me on{' '}
+              <a
+                href="https://linkedin.com/in/ubervisor"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>{' '}
+              or checkout my{' '}
+              <a
+                href="https://github.com/dan0xe"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
+              .
+              <br />
+              <br />
+              Also please note that not all of my projects are listed here.
+              <br />
+              <a
+                className="cursor-pointer"
+                onClick={() => {
+                  localStorage.setItem('dont_show_alert', 'true');
+                  setShow(false);
+                }}
+              >
+                Click here to hide
+              </a>
+            </p>
+          </Alert>
+          <div className="border-t border-gray-300 py-4 text-center text-sm"></div>
+        </>
+      )}
       <>
         {projectList.map((project) => (
           <div key={project.id} className="w-auto">
@@ -120,6 +159,9 @@ const Projects = () => {
                 ))}
               </div>
             </ul>
+            {projectList.length !== project.id && (
+              <div className="border-t border-gray-300 py-4 text-center text-sm"></div>
+            )}
           </div>
         ))}
       </>
