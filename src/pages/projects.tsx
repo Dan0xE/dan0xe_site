@@ -101,8 +101,10 @@ const Projects = () => {
           <Alert style={'bg-blue-200'}>
             <p className="p-2">
               These are projects I am working on, some are private and some are
-              public. If you want to see the source code of a project, please
-              contact me on{' '}
+              public.
+              <br />
+              If you want to see the source code of a project, please contact me
+              on{' '}
               <a
                 href="https://linkedin.com/in/ubervisor"
                 target="_blank"
