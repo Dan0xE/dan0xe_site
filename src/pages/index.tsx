@@ -8,19 +8,19 @@ const Index = () => {
     {
       id: 1,
       name: 'Github',
-      link: 'https://github.com',
+      link: 'https://github.com/Dan0xE',
       icon: 'github',
     },
     {
       id: 2,
       name: 'Twitter',
-      link: '',
+      link: 'https://twitter.com/Dan0xE',
       icon: 'twitter',
     },
     {
       id: 3,
       name: 'LinkedIn',
-      link: '',
+      link: 'https://www.linkedin.com/in/ubervisor/',
       icon: 'linkedin',
     },
   ];
@@ -44,8 +44,7 @@ const Index = () => {
       <ul>
         {socialLinks.map((link) => (
           <li key={link.id}>
-            <a href={link.link}>
-              {/* <i className={`fab fa-${link.icon}`}></i> */}
+            <a href={link.link} target="_blank" rel="noreferrer">
               {link.name}
             </a>
           </li>

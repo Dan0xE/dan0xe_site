@@ -100,7 +100,7 @@ const Projects = () => {
         <>
           <Alert style={'bg-blue-200'}>
             <p className="p-2">
-              These are projects i am working on, some are private and some are
+              These are projects I am working on, some are private and some are
               public. If you want to see the source code of a project, please
               contact me on{' '}
               <a
