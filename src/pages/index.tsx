@@ -9,19 +9,21 @@ const Index = () => {
       id: 1,
       name: 'Github',
       link: 'https://github.com/Dan0xE',
-      icon: 'github',
     },
     {
       id: 2,
       name: 'Twitter',
       link: 'https://twitter.com/Dan0xE',
-      icon: 'twitter',
     },
     {
       id: 3,
       name: 'LinkedIn',
       link: 'https://www.linkedin.com/in/ubervisor/',
-      icon: 'linkedin',
+    },
+    {
+      id: 4,
+      name: 'Soundcloud',
+      link: 'https://soundcloud.com/ubervisor',
     },
   ];
 
@@ -35,10 +37,11 @@ const Index = () => {
       }
     >
       <p>
-        Hello, I&apos;m Dan. I&apos;m a Software Consultant who enjoys learning
-        and making new stuff everyday and building a mod client called Nevouno.
-        My favorite technologies right now are: React.js, Typescript, GraphQL,
-        Node.js, and Rust. <br />
+        Hello, I&apos;m Dan. I&apos;m a Software Consultant and Reverse Engineer
+        who enjoys learning and making new stuff everyday and building a mod
+        client called Nevouno. My favorite technologies right now are: React.js,
+        Typescript, GraphQL, Node.js, and Rust. <br />
+        I also produce EDM music so go checkout my Soundcloud! <br />
         <br /> Follow Me Online Here:
       </p>
       <ul>
