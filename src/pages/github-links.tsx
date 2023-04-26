@@ -26,9 +26,6 @@ const GithubLinks = () => {
         />
       }
     >
-      <p>
-        Here you can find some of my partners Github links. <br />
-      </p>
       <ul>
         {links.map((link) => (
           <li key={link.id}>

@@ -37,8 +37,7 @@ const Partner = () => {
       <>
         <Alert style={'bg-blue-200'}>
           <p className="p-2">
-            Most of these projects are not open source, but you can still visit
-            their
+            Each organization has its own profile on
             <Link href="/github-links"> Github </Link>
           </p>
         </Alert>

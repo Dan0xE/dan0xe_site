@@ -6,8 +6,20 @@ import { Main } from '@/templates/Main';
 import Alert from '../components/alert';
 import Label from '../components/label';
 
+interface Project {
+  map: any;
+  length: number;
+  [index: number]: {
+    id: number;
+    name: string;
+    link?: string;
+    description?: string;
+    tech: string[];
+  };
+}
+
 const Projects = () => {
-  const projectList = [
+  const projectList: Project = [
     {
       id: 1,
       name: 'Nevouno (Currently Private)',
@@ -80,6 +92,13 @@ const Projects = () => {
       description: 'A simple calculator written in 10 minutes in Python',
       tech: ['Python'],
     },
+    {
+      id: 11,
+      name: 'leAudio',
+      link: 'https://leaudio.dan0xe.me',
+      description: 'simple small audio visualizer',
+      tech: ['React, Typescript'],
+    },
   ];
 
   const [show, setShow] = React.useState(true);
@@ -100,11 +119,10 @@ const Projects = () => {
         <>
           <Alert style={'bg-blue-200'}>
             <p className="p-2">
-              These are projects I am working on, some are private and some are
-              public.
+              These are projects I am working on
               <br />
-              If you want to see the source code of a project, please contact me
-              on{' '}
+              If you want to see the source code of a private project included
+              in this list, please contact me on{' '}
               <a
                 href="https://linkedin.com/in/ubervisor"
                 target="_blank"
@@ -112,18 +130,9 @@ const Projects = () => {
               >
                 LinkedIn
               </a>{' '}
-              or checkout my{' '}
-              <a
-                href="https://github.com/dan0xe"
-                target="_blank"
-                rel="noreferrer"
-              >
-                GitHub
-              </a>
-              .
               <br />
               <br />
-              Also please note that not all of my projects are listed here.
+              Also note that not all of my projects are listed here.
               <br />
               <a
                 className="cursor-pointer"
@@ -140,7 +149,7 @@ const Projects = () => {
         </>
       )}
       <>
-        {projectList.map((project) => (
+        {projectList.map((project: any) => (
           <div key={project.id} className="w-auto">
             <h2>
               <a
@@ -156,7 +165,7 @@ const Projects = () => {
             <ul>
               <p className="text-sm font-semibold">Techstack:</p>
               <div className="mt-2 flex flex-row flex-wrap space-x-4">
-                {project.tech.map((tech) => (
+                {project.tech.map((tech: string) => (
                   <Label key={tech}>{tech}</Label>
                 ))}
               </div>
