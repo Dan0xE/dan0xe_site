@@ -97,7 +97,7 @@ const Projects = () => {
       name: 'leAudio',
       link: 'https://leaudio.dan0xe.me',
       description: 'simple small audio visualizer',
-      tech: ['React, Typescript'],
+      tech: ['React', 'Typescript'],
     },
   ];
 
